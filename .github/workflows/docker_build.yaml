@@ -1,0 +1,27 @@
+name: Zerg WP Docker Build
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd # v4.0.0
+
+      - name: Build docker image
+        uses: docker/build-push-action@f9f3042f7e2789586610d6e8b85c8f03e5195baf # v7.2.0
+        with:
+          push: true # TODO change to false after testing
+          #tags: ghcr.io/echoblag/docker-spaceengineers:${{ github.sha }}
+          tags: ghcr.io/echoblag/docker-spaceengineers:test
+          file: ./Dockerfile
+          platforms: linux/amd64

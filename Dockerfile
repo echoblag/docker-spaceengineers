@@ -1,4 +1,4 @@
-FROM debian:bookworm-20241016-slim
+FROM debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818
 
 WORKDIR /root
 
@@ -7,6 +7,7 @@ WORKDIR /root
 ARG DEBIAN_FRONTEND=noninteractive
 ARG WINEBRANCH=stable
 ARG WINEVERSION=9.0.0.0~bookworm-1
+ARG WINETRICKS_VERSION=20260125
 
 ENV WINEARCH=win64
 ENV WINEDEBUG=-all
@@ -40,7 +41,7 @@ RUN \
   steamcmd \
   xvfb \
   cabextract && \
-  curl -L https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks > /usr/local/bin/winetricks && \
+  curl -L "https://raw.githubusercontent.com/Winetricks/winetricks/${WINETRICKS_VERSION}/src/winetricks" > /usr/local/bin/winetricks && \
   chmod +x /usr/local/bin/winetricks 
 
 # Winetricks (This block uses most of the build time)
