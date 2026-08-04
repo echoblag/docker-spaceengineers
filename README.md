@@ -18,16 +18,16 @@ I took parts of their projects to create this one (see credits)
 
 ## Why?
 
-I wanted to have a more cleaner docker container with less dependencies (integrate sesrv-script parts instead of wget the whole script) and a little more configuration through composer files.
+I wanted to have a cleaner Docker container with fewer dependencies (integrate sesrv-script parts instead of wget the whole script) and a little more configuration through Docker Compose files.
 
-## KeyFacts
+## Key Facts
 
-| Key         | :latest              | :winestaging         |
-| ----------- | -------------------- | -------------------- |
-| OS          | Debian 12 (Bookworm) | Debian 12 (Bookworm) |
-| Wine        | 9.0~bookworm-1       | 9.9~bookworm-1       |
-| Docker size | ~1.82GB compressed   | ~1.82GB compressed   |
-| Build Time  | ~ 19 Minutes         | ~ 19 Minutes         |
+| Key         | :latest              |
+| ----------- |----------------------|
+| OS          | Debian 12 (Bookworm) |
+| Wine        | 11.0~bookworm-1      |
+| Docker size | ~2GB compressed      |
+| Build Time  | ~ 10 Minutes         |
 
 ## How to use
 
@@ -43,7 +43,8 @@ Create a [docker-compose.yml](docker-compose.yml) (see example below) and execut
 
 Do not forget to rename `TestInstance` with your instance name!
 
-### example composer - just copy and adjust
+### Docker Compose Example
+Copy and adjust to taste.
 
 ```yaml
 services:
