@@ -17,13 +17,13 @@ env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server DISPLAY=:5.0 wine /tmp
 # Wait until all Wine background processes finish
 env WINEPREFIX=/root/server wineserver -w
 
-#echo "Injecting VC++ x64 Registry keys for Space Engineers safety net..."
-#env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v Installed /t REG_DWORD /d 1 /f
-#env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v MajorVersion /t REG_DWORD /d 14 /f
-#env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v MinorVersion /t REG_DWORD /d 29 /f
+echo "Injecting VC++ x64 Registry keys for Space Engineers safety net..."
+env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v Installed /t REG_DWORD /d 1 /f
+env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v MajorVersion /t REG_DWORD /d 14 /f
+env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server wine reg add "HKLM\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" /v MinorVersion /t REG_DWORD /d 29 /f
 
 # Wait again just to ensure the registry writes commit to disk
-#env WINEPREFIX=/root/server wineserver -w
+env WINEPREFIX=/root/server wineserver -w
 
 # Install dotnet48
 env WINEARCH=win64 WINEDEBUG=-all WINEPREFIX=/root/server DISPLAY=:5.0 winetricks -q --force dotnet48
