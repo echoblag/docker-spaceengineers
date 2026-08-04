@@ -25,7 +25,7 @@ I wanted to have a cleaner Docker container with fewer dependencies (integrate s
 | Key         | :latest              |
 | ----------- |----------------------|
 | OS          | Debian 12 (Bookworm) |
-| Wine        | 11.0~bookworm-1      |
+| Wine        | 10.0~bookworm-1      |
 | Docker size | ~2GB compressed      |
 | Build Time  | ~ 10 Minutes         |
 
