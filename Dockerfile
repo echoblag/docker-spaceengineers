@@ -14,6 +14,8 @@ ENV WINEDEBUG=-all
 ENV WINEPREFIX=/root/server
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
+ENV XDG_RUNTIME_DIR=/tmp
+
 RUN \
   dpkg --add-architecture i386 && \
   apt-get -qq -y update && \
