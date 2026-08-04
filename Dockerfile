@@ -7,7 +7,6 @@ WORKDIR /root
 ARG DEBIAN_FRONTEND=noninteractive
 ARG WINEBRANCH=stable
 ARG WINEVERSION=9.0.0.0~bookworm-1
-ARG WINEVERSION=https://dl.winehq.org/wine-builds/debian/pool/main/w/wine/wine-devel-amd64_9.22~bookworm-1_amd64.deb
 ARG WINETRICKS_VERSION=20260125
 
 ENV WINEARCH=win64
