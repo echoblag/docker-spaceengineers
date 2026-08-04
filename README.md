@@ -1,5 +1,12 @@
 # Space Engineers Dedicated Debian Docker Container
 
+A fork of [Devidian's Space Engineers Docker container](https://github.com/Devidian/docker-spaceengineers), big 
+thanks for all the work and maintenance he has put into it!
+
+This fork focuses on dependency updates to the base image, WINE, and Winetricks and mitigating an breaking changes.
+
+---
+
 First of all thanks to [7thCore](https://github.com/7thCore) and [mmmaxwwwell](https://github.com/mmmaxwwwell) for their great prework making a linux dedicated server for Space Engineers real!
 
 I took parts of their projects to create this one (see credits)
