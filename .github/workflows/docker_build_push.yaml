@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
         with:
           push: true
-#          tags: ghcr.io/echoblag/docker-spaceengineers-wine-11:${{ env.COMMIT_HASH }}, ghcr.io/echoblag/docker-spaceengineers-wine-11:latest
-          tags: ghcr.io/echoblag/docker-spaceengineers-wine-11:test
+#          tags: ghcr.io/echoblag/docker-spaceengineers-wine-10:${{ env.COMMIT_HASH }}, ghcr.io/echoblag/docker-spaceengineers-wine-10:latest
+          tags: ghcr.io/echoblag/docker-spaceengineers-wine-10:test
           file: ./Dockerfile
           platforms: linux/amd64
