@@ -27,8 +27,7 @@ jobs:
       - name: Build docker image
         uses: docker/build-push-action@f9f3042f7e2789586610d6e8b85c8f03e5195baf # v7.2.0
         with:
-          push: true # TODO change to false after testing
-          #tags: ghcr.io/echoblag/docker-spaceengineers:${{ github.sha }}
-          tags: ghcr.io/echoblag/docker-spaceengineers:test
+          push: false
+          tags: ghcr.io/echoblag/docker-spaceengineers:${{ github.sha }}
           file: ./Dockerfile
           platforms: linux/amd64
