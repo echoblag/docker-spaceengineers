@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
         with:
           push: false
-          tags: ghcr.io/echoblag/docker-spaceengineers:${{ github.sha }}
+          tags: ghcr.io/echoblag/docker-spaceengineers-wine-9:${{ github.sha }}
           file: ./Dockerfile
           platforms: linux/amd64
