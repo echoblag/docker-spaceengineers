@@ -6,7 +6,7 @@ WORKDIR /root
 # never env DEBIAN_FRONTEND=noninteractive !!
 ARG DEBIAN_FRONTEND=noninteractive
 ARG WINEBRANCH=stable
-ARG WINEVERSION=9.0.0.0~bookworm-1
+ARG WINEVERSION=11.0.0.0~bookworm-1
 ARG WINETRICKS_VERSION=20260125
 
 ENV WINEARCH=win64
@@ -32,7 +32,7 @@ RUN \
   apt-get install -qq -y \
   libfaudio0:i386 \
   libfaudio0 
-RUN \ 
+RUN \
   apt-get install -qq -y --install-recommends \
   winehq-${WINEBRANCH}=${WINEVERSION} \
   wine-${WINEBRANCH}-i386=${WINEVERSION} \
